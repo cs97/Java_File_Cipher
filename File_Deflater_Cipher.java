@@ -20,6 +20,14 @@ public class FDC {
 	public FDC(String s) {
 		setKey(s);
 	}
+	
+	public void enc(String s) {
+		encrypt(s);
+	}
+
+	public void] dec(String s) {
+		decrypt(s);
+	}	
 
 	private static void setKey(String myKey) {
 		MessageDigest sha = null;
