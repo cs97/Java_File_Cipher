@@ -41,7 +41,7 @@ public class filecipher01 {
 			Cipher cipher = Cipher.getInstance("AES");
 			cipher.init(Cipher.ENCRYPT_MODE, secretKey);
 			CipherInputStream cin = new CipherInputStream(fin, cipher);
-			byte[] input = new byte[64];
+			byte[] input = new byte[1024];
 			while (true) {
 				int bytesRead = cin.read(input);
 				if (bytesRead == -1)
@@ -65,7 +65,7 @@ public class filecipher01 {
 			Cipher cipher = Cipher.getInstance("AES");
 			cipher.init(Cipher.DECRYPT_MODE, secretKey);
 			CipherInputStream cin = new CipherInputStream(fin, cipher);
-			byte[] input = new byte[64];
+			byte[] input = new byte[1024];
 			while (true) {
 				int bytesRead = cin.read(input);
 				if (bytesRead == -1)
