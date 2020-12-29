@@ -42,11 +42,8 @@ public class FDC {
 			FileOutputStream fout = new FileOutputStream(s + ".enc");
 			Cipher cipher = Cipher.getInstance("AES");
 			cipher.init(Cipher.ENCRYPT_MODE, secretKey);
-			//add
 			DeflaterInputStream defl = new DeflaterInputStream(fin);
-			//change
 			CipherInputStream cin = new CipherInputStream(defl, cipher);
-			//1024
 			byte[] input = new byte[1024];
 			while (true) {
 				int bytesRead = cin.read(input);
@@ -71,12 +68,9 @@ public class FDC {
 			Cipher cipher = Cipher.getInstance("AES");
 			cipher.init(Cipher.DECRYPT_MODE, secretKey);
 			CipherInputStream cin = new CipherInputStream(fin, cipher);
-			//inflater
 			InflaterInputStream infl = new InflaterInputStream(cin);
-			//1024
 			byte[] input = new byte[1024];
 			while (true) {
-				//cin to infl
 				int bytesRead = infl.read(input);
 				if (bytesRead == -1)
 					break;
