@@ -1,7 +1,7 @@
 
 ### File_Deflater_Cipher
 ```
-wget https://raw.githubusercontent.com/leftside97/Java_File_Cipher/main/FDC.javat 
+wget https://raw.githubusercontent.com/leftside97/Java_File_Cipher/main/FDC.java
 ```
 ```
 javac FDC.java
