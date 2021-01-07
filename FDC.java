@@ -99,8 +99,8 @@ public class FDC {
 		System.out.println("------------------");
 		System.out.println(" JAVA FILE CIPHER");
 		System.out.println("------------------");
-		System.out.println("file:" + args[1]);
-		System.out.println("key:");
+		//System.out.println("file:" + args[1]);
+		System.out.print("key:");
 		setKey(reader.readLine());
 
 		switch (args[0]) {
