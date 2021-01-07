@@ -13,6 +13,7 @@ import javax.crypto.Cipher;
 import javax.crypto.CipherInputStream;
 import javax.crypto.spec.SecretKeySpec;
 
+//File_Deflater_Cipher.java
 public class FDC {
 	private static SecretKeySpec secretKey;
 	private static byte[] key;
