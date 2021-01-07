@@ -25,7 +25,7 @@ public class FDC {
 		encrypt(s);
 	}
 
-	public void] dec(String s) {
+	public void dec(String s) {
 		decrypt(s);
 	}	
 
