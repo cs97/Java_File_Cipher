@@ -109,6 +109,9 @@ public class FDC {
 		case "-dec":
 			decrypt(args[1]);
 			break;
+		default:
+			System.out.println("usage: FDC [-enc|-dec] <file>");
+			break;
 		}
 	}
 }
