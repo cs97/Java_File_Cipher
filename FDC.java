@@ -100,14 +100,18 @@ public class FDC {
 		System.out.println(" JAVA FILE CIPHER");
 		System.out.println("------------------");
 		//System.out.println("file:" + args[1]);
-		System.out.print("key:");
-		setKey(reader.readLine());
+		//System.out.print("key:");
+		//setKey(reader.readLine());
 
 		switch (args[0]) {
 		case "-enc":
+			System.out.print("key:");
+			setKey(reader.readLine());
 			encrypt(args[1]);
 			break;
 		case "-dec":
+			System.out.print("key:");
+			setKey(reader.readLine());
 			decrypt(args[1]);
 			break;
 		default:
