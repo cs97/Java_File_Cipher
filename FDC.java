@@ -102,25 +102,22 @@ public class FDC {
 		//System.out.println("file:" + args[1]);
 		//System.out.print("key:");
 		//setKey(reader.readLine());
-		if(args[0] == null) {
+		
+		switch (args[0]) {
+		case "-enc":
+			System.out.print("key:");
+			setKey(reader.readLine());
+			encrypt(args[1]);
+			break;
+		case "-dec":
+			System.out.print("key:");
+			setKey(reader.readLine());
+			decrypt(args[1]);
+			break;
+		default:
 			System.out.println("usage: FDC [-enc|-dec] <file>");
-
-		} else {
-			switch (args[0]) {
-			case "-enc":
-				System.out.print("key:");
-				setKey(reader.readLine());
-				encrypt(args[1]);
-				break;
-			case "-dec":
-				System.out.print("key:");
-				setKey(reader.readLine());
-				decrypt(args[1]);
-				break;
-			default:
-				System.out.println("usage: FDC [-enc|-dec] <file>");
-				break;
-			}
+			break;
 		}
+		
 	}
 }
