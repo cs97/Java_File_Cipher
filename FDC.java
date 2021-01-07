@@ -103,7 +103,7 @@ public class FDC {
 		//System.out.print("key:");
 		//setKey(reader.readLine());
 		
-		if(args[0] == null){
+		if(args.length == 0) {
 			System.out.println("usage: FDC [-enc|-dec] <file>");
 			System.exit(0);
 		} else {
