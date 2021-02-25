@@ -11,11 +11,11 @@ import javax.crypto.Cipher;
 import javax.crypto.CipherInputStream;
 import javax.crypto.spec.SecretKeySpec;
 
-public class filecipher01 {
+public class FileCipher {
 	private static SecretKeySpec secretKey;
 	private static byte[] key;
 
-	public filecipher01(String s) {
+	public FileCipher(String s) {
 		setKey(s);
 	}
 
