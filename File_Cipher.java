@@ -86,17 +86,25 @@ public class filecipher01 {
 		System.out.println("------------------");
 		System.out.println(" JAVA FILE CIPHER");
 		System.out.println("------------------");
-		System.out.println("file:" + args[1]);
-		System.out.println("key:");
-		setKey(reader.readLine());
+		if(args.length == 0) {
+			System.out.println("usage: FDC [-enc|-dec] <file>");
+			System.exit(0);
+		} else {
+			System.out.println("file:" + args[1]);
+			System.out.println("key:");
+			setKey(reader.readLine());
 
-		switch (args[0]) {
-		case "-enc":
-			encrypt(args[1]);
-			break;
-		case "-dec":
-			decrypt(args[1]);
-			break;
+			switch (args[0]) {
+			case "-enc":
+				encrypt(args[1]);
+				break;
+			case "-dec":
+				decrypt(args[1]);
+				break;
+			default:
+				System.out.println("usage: FDC [-enc|-dec] <file>");
+				break;
+			}
 		}
 	}
 }
